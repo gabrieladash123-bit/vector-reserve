@@ -26,6 +26,19 @@ These are nonredeemable internal accounting credits. The contract holds or trans
 
 The other account ends with **19** credits; supply remains **20**. A final calm mode would instead produce **7/13**, so the consensus outcome materially affects transfers. A pending draft mentioning calm cannot settle the book.
 
+## Interface
+
+| Method | Effect |
+| --- | --- |
+| `compile_terms()` | Fetch and independently validate the frozen issuer terms; enter OPEN or REVIEW |
+| `quote([calm_quantity, other_quantity], premium)` | Participant posts a basket; positive quantities are sold by the maker, negative quantities are bought |
+| `take(index)` | The other participant accepts; transfer premium and both position legs atomically after reserve checks |
+| `cancel(index)` | Maker cancels its own open quote |
+| `resolve()` | Fetch the next fixed report; wait, block, or realize settlement transfers |
+| `get_state()` | Read source evidence, credits, signed positions, reserve diagnostics, quotes and complete trade history |
+
+Positive premium moves credits **from taker to maker**; negative premium reverses that transfer. If quantity is `q`, the maker's position changes by `-q` and the taker's by `+q`. Quote indices are zero-based and remain stable.
+
 ## Verify
 
 ```sh
