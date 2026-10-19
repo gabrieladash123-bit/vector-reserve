@@ -1,0 +1,8 @@
+{
+  "series": "harbor-credits",
+  "clauses": [
+    "Each unit of calm-claim pays its holder six internal credits if the final operating mode is calm. It pays exactly zero in surge and exactly zero in offline.",
+    "Each unit of other-claim pays six internal credits in surge and exactly zero in calm. The offline amount has not been fixed and will be announced separately; do not assume it is zero.",
+    "These are per-unit terminal amounts. Calm, surge and offline exhaust the contractual payoff space. Credits are internal nonredeemable accounting units."
+  ]
+}

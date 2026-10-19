@@ -1,0 +1,4 @@
+[
+  {"id":"clearing","series":"harbor-credits","endowment":10,"terms":"terms-complete","reports":["report-draft","report-final"],"payouts":[[6,0,0],[0,6,6]],"final_phase":"SETTLED","final_credits":[1,19]},
+  {"id":"uncertain-terms","series":"harbor-credits","endowment":10,"terms":"terms-unknown","reports":["report-final"],"payouts":[[6,0,0],[0,6,-1]],"final_phase":"REVIEW","final_credits":[10,10]}
+]
