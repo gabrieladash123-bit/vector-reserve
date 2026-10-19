@@ -8,13 +8,14 @@ async function main(){
  const revision=fs.readFileSync(path.join(root,'config/fixture-revision.txt'),'utf8').trim();
  assert(suite.length===cases.length&&journal.source_sha256===digest(code),'Complete source-bound proof suite');if(!offline)assert(await rpc('eth_chainId',[])==='0xf22f','StudioNet chain');
  const hashes=new Set(),summary={mode:offline?'offline-artifact':'fresh-rpc-and-state',verified_at:new Date().toISOString(),source_sha256:digest(code),instances:[],transactions:[]};
- async function verify(label,hash,success,caller,d,expected){
+ async function verify(label,hash,success,caller,d,expected,rejection){
   assert(!hashes.has(hash)&&journal.hashes[label]===hash,'Unique journal receipt');hashes.add(hash);
   const saved=load(label+'-receipt'),r=offline?saved:await rpc('eth_getTransactionByHash',[hash]),s=receiptSummary(r);
   assert(s.hash===hash&&s.status==='FINALIZED'&&s.result==='MAJORITY_AGREE'&&s.agree>(s.agree+s.disagree+s.idle)/2,'Finalized strict majority');
   assert((r.to_address||r.recipient).toLowerCase()===d.contract.toLowerCase()&&(r.from_address||r.sender).toLowerCase()===d.callers[caller],'Actual target and signer');
   assert(equal(saved.consensus_data.votes,r.consensus_data.votes)&&equal(saved.data,r.data)&&equal(await decodeReceipt(r),expected),'Decoded actual call and raw votes');
   assert(success?['SUCCESS','FINISHED_WITH_RETURN'].includes(s.execution):s.execution==='ERROR','Expected execution result');
+  if(rejection){const raw=Buffer.from(r.consensus_data.leader_receipt[0].result,'base64');assert(raw[0]===1&&raw.subarray(1).toString('utf8')===rejection,'Exact UserError from actual receipt bytes');}
   if(label.endsWith('-deployment'))assert(code.equals(Buffer.from(r.data.contract_code,'base64')),'Deployment receipt source bytes');summary.transactions.push({label,...s});
  }
  for(let i=0;i<cases.length;i++){
@@ -24,14 +25,14 @@ async function main(){
   const items=plan(c),trace=load(c.id+'-trace');assert(trace.length===items.length,'Complete transaction plan');
   for(let j=0;j<items.length;j++){
    const item=items[j],p=trace[j];assert(equal(p,load(item.label))&&Object.keys(item).every(k=>equal(p[k],item[k]))&&p.contract===d.contract&&p.sender===d.callers[item.caller]&&equal(p.state_before,previous),'Exact snapshot and call chain');
-   await verify(item.label,p.transaction,!item.error,item.caller,d,{method:item.method,args:item.args});replay(previous,item,p.state,c,d);
+   await verify(item.label,p.transaction,!item.error,item.caller,d,{method:item.method,args:item.args},item.error);replay(previous,item,p.state,c,d);
    if(item.error)assert(JSON.stringify(load(item.label+'-decoded-receipt')).includes(item.error),'Exact business rejection');previous=p.state;
   }
   final(c,previous);assert(equal(previous,load(c.id+'-final-state')),'Exact final ledger');
   if(!offline){assert(code.equals(Buffer.from(await rpc('gen_getContractCode',[d.contract]),'base64')),'Live source bytes');assert(equal(previous,await read(c.id+'-fresh-final',['call',d.contract,'get_state'])),'Fresh final credit balances and positions');}
   summary.instances.push({id:c.id,contract:d.contract,phase:previous.phase,credits:previous.book.credits,settlement:previous.book.settlement});
  }
- assert(hashes.size===23&&Object.keys(journal.hashes).length===23,'Exactly 23 distinct planned receipts');summary.transaction_calldata_checked=true;
+ assert(hashes.size===23&&Object.keys(journal.hashes).length===23,'Exactly 23 distinct planned receipts');summary.transaction_calldata_checked=true;summary.rejection_bytes_checked=true;
  if(!offline){summary.live_state_match=true;save('verification',summary);}console.log(JSON.stringify(summary,null,2));
 }
 main().catch(e=>{console.error(e.stack);process.exitCode=1;});

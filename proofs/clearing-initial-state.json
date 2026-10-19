@@ -1,0 +1,48 @@
+{
+  "book": {
+    "credits": [
+      10,
+      10
+    ],
+    "history": [],
+    "positions": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "quotes": [],
+    "settlement": {}
+  },
+  "compiled": {},
+  "configuration": {
+    "accounts": [
+      "0xc20efb217fa053778b64ade27fdb809f68bd34b3",
+      "0xec37a7279cb912460f6487214ad6248fdd114617"
+    ],
+    "endowment": 10,
+    "reports": [
+      {
+        "sha256": "dc74ab1feac898bb6139c4a9d9a2d9d977c2a2824e86638af598479dc9807606",
+        "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/report-draft.json"
+      },
+      {
+        "sha256": "a45d682aa909548038f1beb17d1cc81823b8930303834e39a11eb0b9be68fd60",
+        "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/report-final.json"
+      }
+    ],
+    "repository": "gabrieladash123-bit/vector-reserve",
+    "series": "harbor-credits",
+    "terms": {
+      "sha256": "724f653984f5f5e49f15aa873c3b58f52d5b21d3a160e607eeadf04828836c7a",
+      "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/terms-complete.json"
+    }
+  },
+  "phase": "UNCOMPILED",
+  "report_cursor": 0,
+  "risk": []
+}

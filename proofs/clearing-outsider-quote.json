@@ -1,0 +1,284 @@
+{
+  "label": "clearing-outsider-quote",
+  "method": "quote",
+  "args": [
+    [
+      1,
+      1
+    ],
+    1
+  ],
+  "caller": 2,
+  "error": "[EXPECTED] Participant only",
+  "contract": "0x8810a20Aa538c62365214C344B3BB380954050F5",
+  "transaction": "0x39f8bd4f5c0e73a6d92b90e9d6cb4d682cf23a8353b54f2c9ac08cdc05952f70",
+  "sender": "0xc9bf95e9346ef2fc7a1815faa4f5ed5dd6fd213b",
+  "state_before": {
+    "book": {
+      "credits": [
+        10,
+        10
+      ],
+      "history": [],
+      "positions": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "quotes": [],
+      "settlement": {}
+    },
+    "compiled": {
+      "decision": [
+        {
+          "cells": [
+            {
+              "anchors": [
+                0
+              ],
+              "mode": "calm",
+              "value": 6
+            },
+            {
+              "anchors": [
+                0
+              ],
+              "mode": "surge",
+              "value": 0
+            },
+            {
+              "anchors": [
+                0
+              ],
+              "mode": "offline",
+              "value": 0
+            }
+          ],
+          "instrument": "calm-claim"
+        },
+        {
+          "cells": [
+            {
+              "anchors": [
+                1
+              ],
+              "mode": "calm",
+              "value": 0
+            },
+            {
+              "anchors": [
+                1
+              ],
+              "mode": "surge",
+              "value": 6
+            },
+            {
+              "anchors": [
+                1
+              ],
+              "mode": "offline",
+              "value": 6
+            }
+          ],
+          "instrument": "other-claim"
+        }
+      ],
+      "sha256": "724f653984f5f5e49f15aa873c3b58f52d5b21d3a160e607eeadf04828836c7a",
+      "source": {
+        "clauses": [
+          "Each unit of calm-claim pays its holder six internal credits if the final operating mode is calm. It pays exactly zero in surge and exactly zero in offline.",
+          "Each unit of other-claim pays its holder six internal credits in surge and six in offline. It pays exactly zero in calm.",
+          "These are per-unit terminal amounts. Calm, surge and offline are mutually exclusive and exhaust the contractual payoff space. Credits are internal nonredeemable accounting units."
+        ],
+        "series": "harbor-credits"
+      },
+      "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/terms-complete.json"
+    },
+    "configuration": {
+      "accounts": [
+        "0xc20efb217fa053778b64ade27fdb809f68bd34b3",
+        "0xec37a7279cb912460f6487214ad6248fdd114617"
+      ],
+      "endowment": 10,
+      "reports": [
+        {
+          "sha256": "dc74ab1feac898bb6139c4a9d9a2d9d977c2a2824e86638af598479dc9807606",
+          "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/report-draft.json"
+        },
+        {
+          "sha256": "a45d682aa909548038f1beb17d1cc81823b8930303834e39a11eb0b9be68fd60",
+          "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/report-final.json"
+        }
+      ],
+      "repository": "gabrieladash123-bit/vector-reserve",
+      "series": "harbor-credits",
+      "terms": {
+        "sha256": "724f653984f5f5e49f15aa873c3b58f52d5b21d3a160e607eeadf04828836c7a",
+        "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/terms-complete.json"
+      }
+    },
+    "phase": "OPEN",
+    "report_cursor": 0,
+    "risk": [
+      {
+        "headroom": 10,
+        "pnl": [
+          0,
+          0,
+          0
+        ],
+        "required": 0,
+        "standalone": 0
+      },
+      {
+        "headroom": 10,
+        "pnl": [
+          0,
+          0,
+          0
+        ],
+        "required": 0,
+        "standalone": 0
+      }
+    ]
+  },
+  "state": {
+    "book": {
+      "credits": [
+        10,
+        10
+      ],
+      "history": [],
+      "positions": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "quotes": [],
+      "settlement": {}
+    },
+    "compiled": {
+      "decision": [
+        {
+          "cells": [
+            {
+              "anchors": [
+                0
+              ],
+              "mode": "calm",
+              "value": 6
+            },
+            {
+              "anchors": [
+                0
+              ],
+              "mode": "surge",
+              "value": 0
+            },
+            {
+              "anchors": [
+                0
+              ],
+              "mode": "offline",
+              "value": 0
+            }
+          ],
+          "instrument": "calm-claim"
+        },
+        {
+          "cells": [
+            {
+              "anchors": [
+                1
+              ],
+              "mode": "calm",
+              "value": 0
+            },
+            {
+              "anchors": [
+                1
+              ],
+              "mode": "surge",
+              "value": 6
+            },
+            {
+              "anchors": [
+                1
+              ],
+              "mode": "offline",
+              "value": 6
+            }
+          ],
+          "instrument": "other-claim"
+        }
+      ],
+      "sha256": "724f653984f5f5e49f15aa873c3b58f52d5b21d3a160e607eeadf04828836c7a",
+      "source": {
+        "clauses": [
+          "Each unit of calm-claim pays its holder six internal credits if the final operating mode is calm. It pays exactly zero in surge and exactly zero in offline.",
+          "Each unit of other-claim pays its holder six internal credits in surge and six in offline. It pays exactly zero in calm.",
+          "These are per-unit terminal amounts. Calm, surge and offline are mutually exclusive and exhaust the contractual payoff space. Credits are internal nonredeemable accounting units."
+        ],
+        "series": "harbor-credits"
+      },
+      "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/terms-complete.json"
+    },
+    "configuration": {
+      "accounts": [
+        "0xc20efb217fa053778b64ade27fdb809f68bd34b3",
+        "0xec37a7279cb912460f6487214ad6248fdd114617"
+      ],
+      "endowment": 10,
+      "reports": [
+        {
+          "sha256": "dc74ab1feac898bb6139c4a9d9a2d9d977c2a2824e86638af598479dc9807606",
+          "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/report-draft.json"
+        },
+        {
+          "sha256": "a45d682aa909548038f1beb17d1cc81823b8930303834e39a11eb0b9be68fd60",
+          "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/report-final.json"
+        }
+      ],
+      "repository": "gabrieladash123-bit/vector-reserve",
+      "series": "harbor-credits",
+      "terms": {
+        "sha256": "724f653984f5f5e49f15aa873c3b58f52d5b21d3a160e607eeadf04828836c7a",
+        "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/terms-complete.json"
+      }
+    },
+    "phase": "OPEN",
+    "report_cursor": 0,
+    "risk": [
+      {
+        "headroom": 10,
+        "pnl": [
+          0,
+          0,
+          0
+        ],
+        "required": 0,
+        "standalone": 0
+      },
+      {
+        "headroom": 10,
+        "pnl": [
+          0,
+          0,
+          0
+        ],
+        "required": 0,
+        "standalone": 0
+      }
+    ]
+  }
+}

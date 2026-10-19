@@ -1,0 +1,58 @@
+{
+  "id": "uncertain-terms",
+  "callers": [
+    "0xc20efb217fa053778b64ade27fdb809f68bd34b3",
+    "0xec37a7279cb912460f6487214ad6248fdd114617",
+    "0xc9bf95e9346ef2fc7a1815faa4f5ed5dd6fd213b"
+  ],
+  "sources": {
+    "terms": {
+      "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/terms-unknown.json",
+      "sha256": "fab6fe0719d991d103645f9997d14ceb76f47af74298a70a67a87bf471ea860f",
+      "source": {
+        "series": "harbor-credits",
+        "clauses": [
+          "Each unit of calm-claim pays its holder six internal credits if the final operating mode is calm. It pays exactly zero in surge and exactly zero in offline.",
+          "Each unit of other-claim pays six internal credits in surge and exactly zero in calm. The offline amount has not been fixed and will be announced separately; do not assume it is zero.",
+          "These are per-unit terminal amounts. Calm, surge and offline exhaust the contractual payoff space. Credits are internal nonredeemable accounting units."
+        ]
+      }
+    },
+    "reports": [
+      {
+        "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/report-final.json",
+        "sha256": "a45d682aa909548038f1beb17d1cc81823b8930303834e39a11eb0b9be68fd60",
+        "source": {
+          "series": "harbor-credits",
+          "clauses": [
+            "The final and definitive operating mode for harbor-credits is surge. This is the binding final selection for this series.",
+            "An earlier provisional draft discussed calm. That forecast was rejected: calm is not the final choice. Offline was not selected either."
+          ]
+        }
+      }
+    ]
+  },
+  "fixture_revision": "f69e150808504b11170ee1f34efb97f6850f5c17",
+  "source_sha256": "54b4e4313f4123406bc1c4f92705f80d61f845bc8f6d33c9c535606acfdb633b",
+  "network": "studionet",
+  "chain_id": 61999,
+  "args": [
+    "gabrieladash123-bit/vector-reserve",
+    "harbor-credits",
+    [
+      "0xc20efb217fa053778b64ade27fdb809f68bd34b3",
+      "0xec37a7279cb912460f6487214ad6248fdd114617"
+    ],
+    10,
+    "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/terms-unknown.json",
+    "fab6fe0719d991d103645f9997d14ceb76f47af74298a70a67a87bf471ea860f",
+    [
+      "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/report-final.json"
+    ],
+    [
+      "a45d682aa909548038f1beb17d1cc81823b8930303834e39a11eb0b9be68fd60"
+    ]
+  ],
+  "contract": "0x9a356D23CBc1dbF4f2a7Aa99794C95314B305eCD",
+  "transaction": "0x74457faef3211b75b3e4d51d8f4ed549d0e56f7867cae8a9b59a22cb14f01513"
+}

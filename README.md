@@ -2,6 +2,8 @@
 
 A standalone GenLayer clearing book for contingent credit claims. Consensus compiles a complete source-derived payout matrix; counterparty-accepted basket trades update actual positions and credit balances under an exact scenario reserve invariant. A separately acquired final report determines the settlement transfers.
 
+**Deployed on gasless StudioNet, chain 61999:** [`0x8810a20Aa538c62365214C344B3BB380954050F5`](https://explorer-studio.genlayer.com/address/0x8810a20Aa538c62365214C344B3BB380954050F5). [Deployment](https://explorer-studio.genlayer.com/tx/0xf10bb21ff993861b0cf23ccf81c84660e9e98a32ea612160e0b9fff16b286d08) · [Two books and 23 verified receipts](proofs/README.md) · [Passing CI: 71 tests](https://github.com/gabrieladash123-bit/vector-reserve/actions/runs/39230325682) · [Ready-to-submit text](docs/submission.md).
+
 ## Mechanism
 
 1. Deployment freezes two participant wallets, an initial credit allocation, issuer terms and 1–3 ordered report commitments.

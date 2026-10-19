@@ -1,0 +1,28 @@
+{
+  "source_sha256": "54b4e4313f4123406bc1c4f92705f80d61f845bc8f6d33c9c535606acfdb633b",
+  "hashes": {
+    "clearing-deployment": "0xf10bb21ff993861b0cf23ccf81c84660e9e98a32ea612160e0b9fff16b286d08",
+    "clearing-compile": "0x9a5b220db838038a6120f6b507dd87be6e09134c63600cee5f1157345a8173eb",
+    "clearing-outsider-quote": "0x39f8bd4f5c0e73a6d92b90e9d6cb4d682cf23a8353b54f2c9ac08cdc05952f70",
+    "clearing-basket-quote": "0xfa1a6efd7f11c19cc9a9d71f98f133e4b8d486a8c5f18e3bc5cac4eab76ceefc",
+    "clearing-self-take": "0x093b52f463c3edeffd05e6483ed8b9c1cb6f0ad6d85f7c6dceb902ad0f13069b",
+    "clearing-basket-take": "0xb6d07d55c54ed47f146b1ffa0a915ee2d609bf65e1935d1a900f48ddf2c54575",
+    "clearing-boundary-quote": "0x0b8e0487217b9c7bebf41e5f472791e51c64e51bdcf2b4d50d9c3e81e10f9c3c",
+    "clearing-boundary-take": "0xbd6bebee0038f5e1350c1e38c24b7b5b8638fd1ef401ed9b234461cfc0f59047",
+    "clearing-excess-quote": "0xf1965f71b163f114a8d9af40246c98efa875ccd4cb915df02a996750fd49816e",
+    "clearing-excess-rejected": "0xeda101e9127d67709cdf2d5c5cc0025dbababb66a4b1f49ec71bd36d43dadb79",
+    "clearing-wrong-cancel": "0xeeadd7751d907a95cfe5e067423820c79f428dfafd0c44452ff0a0037cae4eba",
+    "clearing-cancel-excess": "0x497234a97267655c4a9d3496a311c99510533211958fe3c571496eba697731aa",
+    "clearing-cover-quote": "0xda9eae627f387a5e11cb1192b10437eef348f8180a51588da5248bdbc499fe51",
+    "clearing-cover-take": "0xc12b16f9887bfff0e3abc8be9e54bc40eeda8226a9cc20843ae259fbef602bb8",
+    "clearing-draft-pending": "0xa5c384c5f3e8d046b0f71672ae6c52316559acb4774239f27a9ed80095f63bb7",
+    "clearing-other-quote": "0x1db983889af6e1f9116dcec1045f0b0240ed9d990a174e63161ea0e1cdc9771f",
+    "clearing-other-take": "0xfefa56fb570111894afc82806821f444d55e6abd144e6bcf8c6ea9f2c4fd219a",
+    "clearing-resting-quote": "0x72a4b9f5b4c2d899fd396804c16a523a12a706f0fff655205d99d6bcf8527540",
+    "clearing-final-settlement": "0xfa95a492f5d93c0d4c775ba704e88cbd0bdfd55b8d067e43cbc8d000900f16cf",
+    "clearing-closed-quote": "0x3a853044847bd12f210d3cf519f806875ced45e84e5cac9a67b86d037c5b7dda",
+    "uncertain-terms-deployment": "0x74457faef3211b75b3e4d51d8f4ed549d0e56f7867cae8a9b59a22cb14f01513",
+    "uncertain-terms-compile": "0xcf5efda92d1f405591e463f5c9752d03f1dc90d58614c8104587aeb1f11f20ab",
+    "uncertain-terms-blocked-quote": "0x9bc626d30ff08e8f14c5a4f1e61c7aad1a8872bfb1e5ca5c7b037804e9b91a25"
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "mode": "fresh-rpc-and-state",
+  "verified_at": "2026-10-19T09:49:52.363Z",
+  "source_sha256": "54b4e4313f4123406bc1c4f92705f80d61f845bc8f6d33c9c535606acfdb633b",
+  "instances": [
+    {
+      "id": "clearing",
+      "contract": "0x8810a20Aa538c62365214C344B3BB380954050F5",
+      "phase": "SETTLED",
+      "credits": [
+        1,
+        19
+      ],
+      "settlement": {
+        "adjustments": [
+          -12,
+          12
+        ],
+        "credits_after": [
+          1,
+          19
+        ],
+        "credits_before": [
+          13,
+          7
+        ],
+        "mode": "surge",
+        "positions": [
+          [
+            -1,
+            -2
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "uncertain-terms",
+      "contract": "0x9a356D23CBc1dbF4f2a7Aa99794C95314B305eCD",
+      "phase": "REVIEW",
+      "credits": [
+        10,
+        10
+      ],
+      "settlement": {}
+    }
+  ],
+  "transactions": [
+    {
+      "label": "clearing-deployment",
+      "hash": "0xf10bb21ff993861b0cf23ccf81c84660e9e98a32ea612160e0b9fff16b286d08",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 5,
+      "disagree": 0,
+      "idle": 0
+    },
+    {
+      "label": "clearing-compile",
+      "hash": "0x9a5b220db838038a6120f6b507dd87be6e09134c63600cee5f1157345a8173eb",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "clearing-outsider-quote",
+      "hash": "0x39f8bd4f5c0e73a6d92b90e9d6cb4d682cf23a8353b54f2c9ac08cdc05952f70",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 5,
+      "disagree": 0,
+      "idle": 0
+    },
+    {
+      "label": "clearing-basket-quote",
+      "hash": "0xfa1a6efd7f11c19cc9a9d71f98f133e4b8d486a8c5f18e3bc5cac4eab76ceefc",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 5,
+      "disagree": 0,
+      "idle": 0
+    },
+    {
+      "label": "clearing-self-take",
+      "hash": "0x093b52f463c3edeffd05e6483ed8b9c1cb6f0ad6d85f7c6dceb902ad0f13069b",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 4,
+      "disagree": 0,
+      "idle": 1
+    },
+    {
+      "label": "clearing-basket-take",
+      "hash": "0xb6d07d55c54ed47f146b1ffa0a915ee2d609bf65e1935d1a900f48ddf2c54575",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "clearing-boundary-quote",
+      "hash": "0x0b8e0487217b9c7bebf41e5f472791e51c64e51bdcf2b4d50d9c3e81e10f9c3c",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 5,
+      "disagree": 0,
+      "idle": 0
+    },
+    {
+      "label": "clearing-boundary-take",
+      "hash": "0xbd6bebee0038f5e1350c1e38c24b7b5b8638fd1ef401ed9b234461cfc0f59047",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "clearing-excess-quote",
+      "hash": "0xf1965f71b163f114a8d9af40246c98efa875ccd4cb915df02a996750fd49816e",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "clearing-excess-rejected",
+      "hash": "0xeda101e9127d67709cdf2d5c5cc0025dbababb66a4b1f49ec71bd36d43dadb79",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 5,
+      "disagree": 0,
+      "idle": 0
+    },
+    {
+      "label": "clearing-wrong-cancel",
+      "hash": "0xeeadd7751d907a95cfe5e067423820c79f428dfafd0c44452ff0a0037cae4eba",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "clearing-cancel-excess",
+      "hash": "0x497234a97267655c4a9d3496a311c99510533211958fe3c571496eba697731aa",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 5,
+      "disagree": 0,
+      "idle": 0
+    },
+    {
+      "label": "clearing-cover-quote",
+      "hash": "0xda9eae627f387a5e11cb1192b10437eef348f8180a51588da5248bdbc499fe51",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "clearing-cover-take",
+      "hash": "0xc12b16f9887bfff0e3abc8be9e54bc40eeda8226a9cc20843ae259fbef602bb8",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "clearing-draft-pending",
+      "hash": "0xa5c384c5f3e8d046b0f71672ae6c52316559acb4774239f27a9ed80095f63bb7",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "clearing-other-quote",
+      "hash": "0x1db983889af6e1f9116dcec1045f0b0240ed9d990a174e63161ea0e1cdc9771f",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 5,
+      "disagree": 0,
+      "idle": 0
+    },
+    {
+      "label": "clearing-other-take",
+      "hash": "0xfefa56fb570111894afc82806821f444d55e6abd144e6bcf8c6ea9f2c4fd219a",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 5,
+      "disagree": 0,
+      "idle": 0
+    },
+    {
+      "label": "clearing-resting-quote",
+      "hash": "0x72a4b9f5b4c2d899fd396804c16a523a12a706f0fff655205d99d6bcf8527540",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 5,
+      "disagree": 0,
+      "idle": 0
+    },
+    {
+      "label": "clearing-final-settlement",
+      "hash": "0xfa95a492f5d93c0d4c775ba704e88cbd0bdfd55b8d067e43cbc8d000900f16cf",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "clearing-closed-quote",
+      "hash": "0x3a853044847bd12f210d3cf519f806875ced45e84e5cac9a67b86d037c5b7dda",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "uncertain-terms-deployment",
+      "hash": "0x74457faef3211b75b3e4d51d8f4ed549d0e56f7867cae8a9b59a22cb14f01513",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "uncertain-terms-compile",
+      "hash": "0xcf5efda92d1f405591e463f5c9752d03f1dc90d58614c8104587aeb1f11f20ab",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "uncertain-terms-blocked-quote",
+      "hash": "0x9bc626d30ff08e8f14c5a4f1e61c7aad1a8872bfb1e5ca5c7b037804e9b91a25",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 5,
+      "disagree": 0,
+      "idle": 0
+    }
+  ],
+  "transaction_calldata_checked": true,
+  "rejection_bytes_checked": true,
+  "live_state_match": true
+}

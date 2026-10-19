@@ -1,0 +1,610 @@
+{
+  "label": "clearing-cover-take",
+  "method": "take",
+  "args": [
+    3
+  ],
+  "caller": 0,
+  "contract": "0x8810a20Aa538c62365214C344B3BB380954050F5",
+  "transaction": "0xc12b16f9887bfff0e3abc8be9e54bc40eeda8226a9cc20843ae259fbef602bb8",
+  "sender": "0xc20efb217fa053778b64ade27fdb809f68bd34b3",
+  "state_before": {
+    "book": {
+      "credits": [
+        12,
+        8
+      ],
+      "history": [
+        {
+          "caller": 0,
+          "index": 0,
+          "operation": "QUOTE"
+        },
+        {
+          "caller": 1,
+          "credits": [
+            11,
+            9
+          ],
+          "index": 0,
+          "operation": "TAKE",
+          "positions": [
+            [
+              -1,
+              -1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "risk": [
+            {
+              "headroom": 5,
+              "pnl": [
+                -6,
+                -6,
+                -6
+              ],
+              "required": 6,
+              "standalone": 12
+            },
+            {
+              "headroom": 9,
+              "pnl": [
+                6,
+                6,
+                6
+              ],
+              "required": 0,
+              "standalone": 0
+            }
+          ]
+        },
+        {
+          "caller": 0,
+          "index": 1,
+          "operation": "QUOTE"
+        },
+        {
+          "caller": 1,
+          "credits": [
+            12,
+            8
+          ],
+          "index": 1,
+          "operation": "TAKE",
+          "positions": [
+            [
+              -2,
+              -1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "risk": [
+            {
+              "headroom": 0,
+              "pnl": [
+                -12,
+                -6,
+                -6
+              ],
+              "required": 12,
+              "standalone": 18
+            },
+            {
+              "headroom": 8,
+              "pnl": [
+                12,
+                6,
+                6
+              ],
+              "required": 0,
+              "standalone": 0
+            }
+          ]
+        },
+        {
+          "caller": 0,
+          "index": 2,
+          "operation": "QUOTE"
+        },
+        {
+          "caller": 0,
+          "index": 2,
+          "operation": "CANCEL"
+        },
+        {
+          "caller": 1,
+          "index": 3,
+          "operation": "QUOTE"
+        }
+      ],
+      "positions": [
+        [
+          -2,
+          -1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "quotes": [
+        {
+          "maker": 0,
+          "premium": 1,
+          "quantities": [
+            1,
+            1
+          ],
+          "status": "TAKEN"
+        },
+        {
+          "maker": 0,
+          "premium": 1,
+          "quantities": [
+            1,
+            0
+          ],
+          "status": "TAKEN"
+        },
+        {
+          "maker": 0,
+          "premium": 0,
+          "quantities": [
+            1,
+            0
+          ],
+          "status": "CANCELLED"
+        },
+        {
+          "maker": 1,
+          "premium": 1,
+          "quantities": [
+            1,
+            0
+          ],
+          "status": "OPEN"
+        }
+      ],
+      "settlement": {}
+    },
+    "compiled": {
+      "decision": [
+        {
+          "cells": [
+            {
+              "anchors": [
+                0
+              ],
+              "mode": "calm",
+              "value": 6
+            },
+            {
+              "anchors": [
+                0
+              ],
+              "mode": "surge",
+              "value": 0
+            },
+            {
+              "anchors": [
+                0
+              ],
+              "mode": "offline",
+              "value": 0
+            }
+          ],
+          "instrument": "calm-claim"
+        },
+        {
+          "cells": [
+            {
+              "anchors": [
+                1
+              ],
+              "mode": "calm",
+              "value": 0
+            },
+            {
+              "anchors": [
+                1
+              ],
+              "mode": "surge",
+              "value": 6
+            },
+            {
+              "anchors": [
+                1
+              ],
+              "mode": "offline",
+              "value": 6
+            }
+          ],
+          "instrument": "other-claim"
+        }
+      ],
+      "sha256": "724f653984f5f5e49f15aa873c3b58f52d5b21d3a160e607eeadf04828836c7a",
+      "source": {
+        "clauses": [
+          "Each unit of calm-claim pays its holder six internal credits if the final operating mode is calm. It pays exactly zero in surge and exactly zero in offline.",
+          "Each unit of other-claim pays its holder six internal credits in surge and six in offline. It pays exactly zero in calm.",
+          "These are per-unit terminal amounts. Calm, surge and offline are mutually exclusive and exhaust the contractual payoff space. Credits are internal nonredeemable accounting units."
+        ],
+        "series": "harbor-credits"
+      },
+      "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/terms-complete.json"
+    },
+    "configuration": {
+      "accounts": [
+        "0xc20efb217fa053778b64ade27fdb809f68bd34b3",
+        "0xec37a7279cb912460f6487214ad6248fdd114617"
+      ],
+      "endowment": 10,
+      "reports": [
+        {
+          "sha256": "dc74ab1feac898bb6139c4a9d9a2d9d977c2a2824e86638af598479dc9807606",
+          "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/report-draft.json"
+        },
+        {
+          "sha256": "a45d682aa909548038f1beb17d1cc81823b8930303834e39a11eb0b9be68fd60",
+          "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/report-final.json"
+        }
+      ],
+      "repository": "gabrieladash123-bit/vector-reserve",
+      "series": "harbor-credits",
+      "terms": {
+        "sha256": "724f653984f5f5e49f15aa873c3b58f52d5b21d3a160e607eeadf04828836c7a",
+        "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/terms-complete.json"
+      }
+    },
+    "phase": "OPEN",
+    "report_cursor": 0,
+    "risk": [
+      {
+        "headroom": 0,
+        "pnl": [
+          -12,
+          -6,
+          -6
+        ],
+        "required": 12,
+        "standalone": 18
+      },
+      {
+        "headroom": 8,
+        "pnl": [
+          12,
+          6,
+          6
+        ],
+        "required": 0,
+        "standalone": 0
+      }
+    ]
+  },
+  "state": {
+    "book": {
+      "credits": [
+        11,
+        9
+      ],
+      "history": [
+        {
+          "caller": 0,
+          "index": 0,
+          "operation": "QUOTE"
+        },
+        {
+          "caller": 1,
+          "credits": [
+            11,
+            9
+          ],
+          "index": 0,
+          "operation": "TAKE",
+          "positions": [
+            [
+              -1,
+              -1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "risk": [
+            {
+              "headroom": 5,
+              "pnl": [
+                -6,
+                -6,
+                -6
+              ],
+              "required": 6,
+              "standalone": 12
+            },
+            {
+              "headroom": 9,
+              "pnl": [
+                6,
+                6,
+                6
+              ],
+              "required": 0,
+              "standalone": 0
+            }
+          ]
+        },
+        {
+          "caller": 0,
+          "index": 1,
+          "operation": "QUOTE"
+        },
+        {
+          "caller": 1,
+          "credits": [
+            12,
+            8
+          ],
+          "index": 1,
+          "operation": "TAKE",
+          "positions": [
+            [
+              -2,
+              -1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "risk": [
+            {
+              "headroom": 0,
+              "pnl": [
+                -12,
+                -6,
+                -6
+              ],
+              "required": 12,
+              "standalone": 18
+            },
+            {
+              "headroom": 8,
+              "pnl": [
+                12,
+                6,
+                6
+              ],
+              "required": 0,
+              "standalone": 0
+            }
+          ]
+        },
+        {
+          "caller": 0,
+          "index": 2,
+          "operation": "QUOTE"
+        },
+        {
+          "caller": 0,
+          "index": 2,
+          "operation": "CANCEL"
+        },
+        {
+          "caller": 1,
+          "index": 3,
+          "operation": "QUOTE"
+        },
+        {
+          "caller": 0,
+          "credits": [
+            11,
+            9
+          ],
+          "index": 3,
+          "operation": "TAKE",
+          "positions": [
+            [
+              -1,
+              -1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "risk": [
+            {
+              "headroom": 5,
+              "pnl": [
+                -6,
+                -6,
+                -6
+              ],
+              "required": 6,
+              "standalone": 12
+            },
+            {
+              "headroom": 9,
+              "pnl": [
+                6,
+                6,
+                6
+              ],
+              "required": 0,
+              "standalone": 0
+            }
+          ]
+        }
+      ],
+      "positions": [
+        [
+          -1,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "quotes": [
+        {
+          "maker": 0,
+          "premium": 1,
+          "quantities": [
+            1,
+            1
+          ],
+          "status": "TAKEN"
+        },
+        {
+          "maker": 0,
+          "premium": 1,
+          "quantities": [
+            1,
+            0
+          ],
+          "status": "TAKEN"
+        },
+        {
+          "maker": 0,
+          "premium": 0,
+          "quantities": [
+            1,
+            0
+          ],
+          "status": "CANCELLED"
+        },
+        {
+          "maker": 1,
+          "premium": 1,
+          "quantities": [
+            1,
+            0
+          ],
+          "status": "TAKEN"
+        }
+      ],
+      "settlement": {}
+    },
+    "compiled": {
+      "decision": [
+        {
+          "cells": [
+            {
+              "anchors": [
+                0
+              ],
+              "mode": "calm",
+              "value": 6
+            },
+            {
+              "anchors": [
+                0
+              ],
+              "mode": "surge",
+              "value": 0
+            },
+            {
+              "anchors": [
+                0
+              ],
+              "mode": "offline",
+              "value": 0
+            }
+          ],
+          "instrument": "calm-claim"
+        },
+        {
+          "cells": [
+            {
+              "anchors": [
+                1
+              ],
+              "mode": "calm",
+              "value": 0
+            },
+            {
+              "anchors": [
+                1
+              ],
+              "mode": "surge",
+              "value": 6
+            },
+            {
+              "anchors": [
+                1
+              ],
+              "mode": "offline",
+              "value": 6
+            }
+          ],
+          "instrument": "other-claim"
+        }
+      ],
+      "sha256": "724f653984f5f5e49f15aa873c3b58f52d5b21d3a160e607eeadf04828836c7a",
+      "source": {
+        "clauses": [
+          "Each unit of calm-claim pays its holder six internal credits if the final operating mode is calm. It pays exactly zero in surge and exactly zero in offline.",
+          "Each unit of other-claim pays its holder six internal credits in surge and six in offline. It pays exactly zero in calm.",
+          "These are per-unit terminal amounts. Calm, surge and offline are mutually exclusive and exhaust the contractual payoff space. Credits are internal nonredeemable accounting units."
+        ],
+        "series": "harbor-credits"
+      },
+      "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/terms-complete.json"
+    },
+    "configuration": {
+      "accounts": [
+        "0xc20efb217fa053778b64ade27fdb809f68bd34b3",
+        "0xec37a7279cb912460f6487214ad6248fdd114617"
+      ],
+      "endowment": 10,
+      "reports": [
+        {
+          "sha256": "dc74ab1feac898bb6139c4a9d9a2d9d977c2a2824e86638af598479dc9807606",
+          "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/report-draft.json"
+        },
+        {
+          "sha256": "a45d682aa909548038f1beb17d1cc81823b8930303834e39a11eb0b9be68fd60",
+          "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/report-final.json"
+        }
+      ],
+      "repository": "gabrieladash123-bit/vector-reserve",
+      "series": "harbor-credits",
+      "terms": {
+        "sha256": "724f653984f5f5e49f15aa873c3b58f52d5b21d3a160e607eeadf04828836c7a",
+        "url": "https://raw.githubusercontent.com/gabrieladash123-bit/vector-reserve/f69e150808504b11170ee1f34efb97f6850f5c17/records/terms-complete.json"
+      }
+    },
+    "phase": "OPEN",
+    "report_cursor": 0,
+    "risk": [
+      {
+        "headroom": 5,
+        "pnl": [
+          -6,
+          -6,
+          -6
+        ],
+        "required": 6,
+        "standalone": 12
+      },
+      {
+        "headroom": 9,
+        "pnl": [
+          6,
+          6,
+          6
+        ],
+        "required": 0,
+        "standalone": 0
+      }
+    ]
+  }
+}
